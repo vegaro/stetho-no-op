@@ -11,4 +11,5 @@ package com.facebook.stetho;
 
 
 public interface InspectorModulesProvider {
+
 }
