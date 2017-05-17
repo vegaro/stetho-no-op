@@ -4,11 +4,7 @@ import android.content.Context;
 
 public class Stetho {
     public static InitializerBuilder newInitializerBuilder(Context context) {
-        return new InitializerBuilder();
-    }
-
-    public static class Initializer {
-
+        return null;
     }
 
     public static void initialize(Initializer initializer) {
@@ -23,26 +19,25 @@ public class Stetho {
         return null;
     }
 
-    public static class DumperPluginsProvider {
-
-    }
-
-    public static class InspectorModulesProvider {
+    public static abstract class Initializer {
 
     }
 
     public static class InitializerBuilder {
+        private InitializerBuilder(Context context) {
+        }
 
-        public InitializerBuilder enableDumpapp(DumperPluginsProvider provider) {
+        public InitializerBuilder enableDumpapp(DumperPluginsProvider plugins) {
             return this;
         }
 
-        public InitializerBuilder enableWebKitInspector(InspectorModulesProvider provider) {
+        public InitializerBuilder enableWebKitInspector(InspectorModulesProvider modules) {
             return this;
         }
 
         public Initializer build() {
-            return new Initializer();
+            return null;
         }
     }
+
 }
